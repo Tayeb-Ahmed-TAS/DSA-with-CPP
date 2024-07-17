@@ -1,0 +1,6 @@
+.vscode/tasks.json
+**/*.exe
+.vscode/settings.json
+.vscode/launch.json
+.vscode/c_cpp_properties.json
+prac.cpp

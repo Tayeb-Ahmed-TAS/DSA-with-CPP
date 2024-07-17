@@ -11,6 +11,42 @@ Linear search is a simple search algorithm that searches for a target value with
 4. If the target value is not found, return -1.
 ```
 
+```cpp
+LINEAR-SEARCH(DATA, N, ITEM)
+
+    Step 1: Set LOC = 1
+
+    Step 2: Repeat Steps 3 and 4 while LOC <= N and DATA[LOC] ≠ ITEM
+
+    Step 3: Set LOC = LOC + 1
+
+    Step 4: [Successful?] If LOC > N, then
+        Write: ITEM not in the list
+        Otherwise
+        Write: ITEM is in position LOC
+        
+    Step 5: Exit
+```
+
+```cpp
+LINEAR(DATA,N,ITEM,LOC)
+
+Step 1: Set DATA[N+1]=ITEM
+
+Step 2: Set LOC=1
+
+Step 3: Repeat while DATA[LOC] != ITEM
+        Set LOC=LOC+1
+
+Step 4: [Successful?] If LOC=N+1, then
+        Write: ITEM is not in the list
+        Otherwise
+        Write: ITEM is in position LOC
+
+Step 5: Exit
+
+```
+
 ## Pseudocode
 
 ```cpp
@@ -23,7 +59,7 @@ function linearSearch(array, target):
 
 ## Implementation
 
-- [C++ Code](linear_search.cpp)
+- [C++ Code](https://github.com/Tayeb-Ahmed-TAS/DSA-with-CPP/blob/0ab4988cd4cf590d9bbfd38c45cfbee51a5e4279/Searching%20In%20Arrays/Linear%20Search/Linear_Search.cpp)
 
 ## Complexity Analysis
 

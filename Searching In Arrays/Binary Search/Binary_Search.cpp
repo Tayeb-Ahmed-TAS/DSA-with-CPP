@@ -43,3 +43,15 @@ int main() {
 
   return 0;
 }
+
+/*
+
+Note:
+
+1. if (item < arr[mid]) {
+       End = mid - 1;
+
+2. if (item > arr[mid]) {
+       Beg = mid + 1;
+
+ */

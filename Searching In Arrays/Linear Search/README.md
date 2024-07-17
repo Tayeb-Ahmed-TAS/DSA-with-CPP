@@ -65,3 +65,16 @@ function linearSearch(array, target):
 
 - Time complexity: O(n)
 - Space complexity: O(1)
+
+## Worst-case
+
+- The worst-case of Linear Search is **n + 1**
+
+## Best-case
+
+- The best-case of Linear Search is **1**
+
+## Applications
+
+- Linear search is used to search for a target value in an array.
+- It is used in many algorithms as a subroutine.

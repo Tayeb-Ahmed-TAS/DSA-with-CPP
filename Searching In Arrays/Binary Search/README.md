@@ -71,3 +71,5 @@ function binarySearch(array, target):
 - Space complexity: O(1)
 
 ### ***Binary Search is Better than Linear Search***
+
+### ***Binary Search is fast and efficient***

@@ -2,15 +2,15 @@
 
 using namespace std;
 
-int linear_search(int arr[], int n, int key) {
+int linear_search(int arr[], int n, int item) {
   for (int i = 0; i < n; i++) {
-    // Check if current element matches with the key
-    if (arr[i] == key) {
+    // Check if current element matches with the item
+    if (arr[i] == item) {
       return i;
     }
   }
 
-  // If key is not found in the array
+  // If item is not found in the array
 
   return -1;
 }
@@ -21,17 +21,17 @@ int main() {
 
   int n = sizeof(arr) / sizeof(int);
 
-  int key;
+  int item;
 
-  cout << "Enter the key to be searched: ";
-  cin >> key;
+  cout << "Enter the item to be searched: ";
+  cin >> item;
 
-  int index = linear_search(arr, n, key);
+  int index = linear_search(arr, n, item);
 
   if (index != -1) {
-    cout << key << " is present at index " << index << endl;
+    cout << item << " is present at index " << index << endl;
   } else {
-    cout << key << " is NOT Found !" << endl;
+    cout << item << " is NOT Found !" << endl;
   }
 
   return 0;

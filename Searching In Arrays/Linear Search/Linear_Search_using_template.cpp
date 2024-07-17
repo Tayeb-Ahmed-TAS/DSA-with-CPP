@@ -4,15 +4,15 @@ using namespace std;
 
 template <class t>
 
-t linear_search(t arr[], int n, t key) {
+t linear_search(t arr[], int n, t item) {
   for (int i = 0; i < n; i++) {
-    // Check if current element matches with the key
-    if (arr[i] == key) {
+    // Check if current element matches with the item
+    if (arr[i] == item) {
       return i;
     }
   }
 
-  // If key is not found in the array
+  // If item is not found in the array
   return -1;
 }
 
@@ -22,17 +22,17 @@ int main() {
 
   int n = sizeof(arr) / sizeof(char);
 
-  char key;
+  char item;
 
   cout << "Enter the character to be searched: ";
-  cin >> key;
+  cin >> item;
 
-  int index = linear_search(arr, n, key);
+  int index = linear_search(arr, n, item);
 
   if (index != -1) {
-    cout << key << " is present at index " << index << endl;
+    cout << item << " is present at index " << index << endl;
   } else {
-    cout << key << " is NOT Found !" << endl;
+    cout << item << " is NOT Found !" << endl;
   }
 
   return 0;

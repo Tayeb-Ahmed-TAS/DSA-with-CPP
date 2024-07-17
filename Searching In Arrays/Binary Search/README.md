@@ -6,7 +6,7 @@ Binary search is a search algorithm that finds the position of a target value wi
 
 - The array must be sorted before applying binary search.
 - The time complexity of binary search is O(log n).
-  - That means if the array has 100 items then O(log 100) = 2, because 2^2 = 4 and 2^3 = 8. So, the maximum number of comparisons will be 2 or 3.
+  - That means if the array has 100 items then log 100 = 6 (6.644 but 6 by taking integer value).{log base 2 (100) = 6,,,,  log base 2 (100) = log(100)/log(2) = 6.64}. So the binary search will take at most 6 iterations to find the element.
 
 ## Algorithm
 

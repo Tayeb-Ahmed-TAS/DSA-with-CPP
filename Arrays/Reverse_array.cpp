@@ -11,6 +11,8 @@ void display(int arr[], int n) {
   cout << endl;
 }
 
+// Function to reverse the array
+
 void reverse_array(int arr[], int n) {
   int start = 0;
   int end = n - 1; //  Because array index starts from 0
@@ -32,7 +34,7 @@ int main() {
 
   display(arr, n);
 
-  // Reverse the array
+  // Function call for Reverse array
 
   reverse_array(arr, n);
 

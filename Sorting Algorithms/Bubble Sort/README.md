@@ -76,10 +76,10 @@ The reason for this is that after each iteration, the largest element among the 
 
 We can see from the diagram above,
 
-1. In the first pass, we compared all the elements.(n-1 here, n = 4 & i = 0 so 4-1 = 3 and n-i-1 = 4-0-1 = 3)
+1. In the first pass, we compare 3 times (n-1 here, n = 4 & i = 0 so 4-1 = 3 and n-i-1 = 4-0-1 = 3)
 
-2. In the second pass, we compared all the elements except the last one. (n-1 here, n = 4 & i = 1 so 4-1 = 3 and n-i-1 = 4-1-1 = 2)
+2. In the second pass, we compared all the elements except the last one. That means we compare 2 times (n-2 here, n = 4 & i = 1 so 4-2 = 2 and n-i-1 = 4-1-1 = 2)
 
-3. In the third pass, we compared all the elements except the last two. (n-1 here, n = 4 & i = 2 so 4-1 = 3 and n-i-1 = 4-2-1 = 1)
+3. In the third pass, we compared all the elements except the last two. That means we compare 1 time (n-3 here, n = 4 & i = 2 so 4-3 = 1 and n-i-1 = 4-2-1 = 1)
 
 That’s why we use j < n - i - 1 in the inner loop.

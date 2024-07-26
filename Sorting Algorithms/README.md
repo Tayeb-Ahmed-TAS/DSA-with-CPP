@@ -6,6 +6,10 @@ Sorting is the process of arranging elements in a specific order.
 
 The most common order is numerical order, but sorting can be applied to any data type that has a defined order relation.
 
+## What is a Sorting Algorithm?
+
+A sorting algorithm is an algorithm that takes an array or a list as input and outputs the same array or list in a sorted order (Increasing Order or Decreasing Order).
+
 ## Some Sorting Algorithms
 
 1. Bubble Sort

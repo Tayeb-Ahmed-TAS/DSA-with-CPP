@@ -6,7 +6,7 @@
 
 From the above-given diagram, we can infer the following conclusions about the bubble sort algorithm –
 
-1. In bubble sort, to sort a list of size n, we need to perform n – 1 iterations. Notice we had 4 elements with us, and we got the sorted list in 3 passes. This is because each time we iterate over the list, an element gets sorted. This element is left in the next iteration of the loop. While we reach the (n – 1)th iteration, we are only left with one number. And, since a minimum of two numbers is required for comparison, that number can not be compared further.
+1. In bubble sort, to sort a list of size n, we need to perform ***n – 1*** iterations. Notice we had 4 elements with us, and we got the sorted list in 3 passes. This is because each time we iterate over the list, an element gets sorted. This element is left in the next iteration of the loop. While we reach the ***(n – 1)*** th iteration, we are only left with one number. And, since a minimum of two numbers is required for comparison, that number can not be compared further.
 
 2. In the first pass, the highest element (5 in this case) was bubbled out on the right side of the list. Similarly, after each iteration, the largest among the unsorted elements was placed at its position. This is the reason why this sorting algorithm is known as bubble sort.
 
@@ -50,13 +50,13 @@ end bubbleSort
 ```cpp
 // Optimized Bubble sort in C++
 // perform the bubble sort
-void bubbleSort(int arr[], int size) {
+void bubbleSort(int arr[], int n) {
  
   // loop over array elements
-  for (int i = 0; i < size - 1; ++i) {
+  for (int i = 0; i < n - 1; ++i) {
     
     // loop to compare array elements
-    for (int j = 0; j < size - i - 1; ++j) {
+    for (int j = 0; j < n - i - 1; ++j) {
       
       // compare adjacent elements
       if (arr[j] > arr[j + 1]) {
@@ -69,3 +69,17 @@ void bubbleSort(int arr[], int size) {
   }
 }
 ```
+
+## Why j < n - i - 1?
+
+The reason for this is that after each iteration, the largest element among the unsorted elements is placed at its correct position. So, we don’t need to compare it again. This is why we reduce the number of comparisons by one after each iteration.
+
+We can see from the diagram above,
+
+1. In the first pass, we compared all the elements.(n-1 here, n = 4 & i = 0 so 4-1 = 3 and n-i-1 = 4-0-1 = 3)
+
+2. In the second pass, we compared all the elements except the last one. (n-1 here, n = 4 & i = 1 so 4-1 = 3 and n-i-1 = 4-1-1 = 2)
+
+3. In the third pass, we compared all the elements except the last two. (n-1 here, n = 4 & i = 2 so 4-1 = 3 and n-i-1 = 4-2-1 = 1)
+
+That’s why we use j < n - i - 1 in the inner loop.

@@ -53,10 +53,10 @@ end bubbleSort
 void bubbleSort(int arr[], int n) {
  
   // loop over array elements
-  for (int i = 0; i < n - 1; ++i) {
+  for (int i = 1; i <= n - 1; ++i) {
     
     // loop to compare array elements
-    for (int j = 0; j < n - i - 1; ++j) {
+    for (int j = 0; j <= n - i - 1; ++j) {
       
       // compare adjacent elements
       if (arr[j] > arr[j + 1]) {
@@ -70,7 +70,15 @@ void bubbleSort(int arr[], int n) {
 }
 ```
 
-## Why j < n - i - 1?
+### Why i < n - 1?
+
+- Here i is times (The number of iterations) we need to perform to sort the list.
+- The reason for this is that to sort a list of n elements, we need to perform n – 1 iterations.
+- That means we'll if we have 4 elements, we need to perform 3 iterations to sort the list.
+- And the index starts from 1, so the last index will be n - 1.
+- So, we need to perforn n - 1 iterations to sort the list.
+
+### Why j <= n - i - 1?
 
 The reason for this is that after each iteration, the largest element among the unsorted elements is placed at its correct position. So, we don’t need to compare it again. This is why we reduce the number of comparisons by one after each iteration.
 

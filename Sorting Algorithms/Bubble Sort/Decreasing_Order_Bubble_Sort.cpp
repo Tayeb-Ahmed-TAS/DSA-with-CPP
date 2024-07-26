@@ -1,4 +1,4 @@
-// Bubble Sort: Increasing Order (Ascending Order)
+// Bubble Sort: Decreasing Order (Descending Order)
 
 #include <iostream>
 
@@ -7,16 +7,10 @@ using namespace std;
 void Bubble_Sort(int arr[], int n) {
   for (int times = 1; times <= n - 1; times++) {
     for (int j = 0; j <= n - times - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
+      if (arr[j] < arr[j + 1]) {
         swap(arr[j], arr[j + 1]);
       }
     }
-  }
-}
-
-void display(int arr[], int n) {
-  for (int i = 0; i < n; i++) {
-    cout << arr[i] << " ";
   }
 }
 
@@ -29,7 +23,9 @@ int main() {
 
   cout << "Sorted Array: " << endl;
 
-  display(arr, n);
+  for (auto x : arr) {
+    cout << x << " ";
+  }
 
   return 0;
 }

@@ -5,6 +5,7 @@
 using namespace std;
 
 void Insertion_Sort(int arr[], int n) {
+  // Loop for passes (Times the array is iterated)
   for (int i = 1; i <= n - 1; i++) {
     // i=1 because we assume that the first element is already sorted and i-1
     // can't be less than 0
@@ -12,7 +13,7 @@ void Insertion_Sort(int arr[], int n) {
     int current = arr[i]; // current element to be inserted
     int prev = i - 1;
 
-    // Loop to find the right index where the current element should be inserted
+    // Loop for each pass
     while (prev >= 0 && arr[prev] > current) {
       arr[prev + 1] = arr[prev];
       prev--;

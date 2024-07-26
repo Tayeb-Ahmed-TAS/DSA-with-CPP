@@ -11,6 +11,10 @@ void printAllPairs(int arr[], int n) {
     for (int j = i + 1; j < n; j++) {
       cout << "(" << arr[i] << ", " << arr[j] << ")"
            << "  ";
+
+      // (j == n - 1) ? cout << "(" << arr[i] << " , " << arr[j] << ")"
+      //              : cout << "(" << arr[i] << " , " << arr[j] << "), ";
+      // For resolve coma (,)
     }
 
     cout << endl;
@@ -32,6 +36,6 @@ int main() {
 // for the second element.
 // 2. The first loop will run from 0 to n-1 and the second loop will run from
 // i+1 to n.
-// 3. Print the pair of elements at ith and jth index.
+// 3. Print the pair of elements at i th and j th index.
 // 4. Repeat the above steps until the first loop reaches n-1.
 // 5. All the pairs of elements will be printed.

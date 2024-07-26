@@ -5,11 +5,17 @@ using namespace std;
 void printSubarrays(int arr[], int n) {
   for (int i = 0; i < n; i++) {
     for (int j = i; j < n; j++) {
-        cout<<"( ";
+      cout << "( ";
       for (int k = i; k <= j; k++) {
         cout << arr[k] << " ";
+
+        // (k == j) ? cout << arr[k] : cout << arr[k] << ", ";
+        // For Using coma (,)
       }
       cout << "),";
+
+      // (i == n - 1 && j == n - 1) ? cout << ")" : cout << "), ";
+      // For Resolve last coma (,)
     }
     cout << endl;
   }

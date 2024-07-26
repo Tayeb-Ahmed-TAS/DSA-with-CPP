@@ -1,6 +1,14 @@
 # Insertion Sort
 
-Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands. It is a comparison-based algorithm that builds a final sorted list one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+Insertion sort is similar to playing cards in our hands.
+
+![Insertion-Sort Card Example](https://github.com/Tayeb-Ahmed-TAS/Images/blob/6ed7ea8bdd1bc95e8bd45120c623b81b08939776/card_insertion.png)
+
+Insert the ***card*** in its correct position in a sorted part.
+
+It is a comparison-based algorithm that builds a final sorted list one item at a time.
+
+It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
 
 ## How it works?
 
@@ -48,4 +56,38 @@ Similarly, we will place every element which is unsorted in its correct position
 
 ## Algorithm
 
-```algorithm
+After having a detailed explanation about the introduction and working of insertion sort C++. Now, let's discuss the algorithm used for its implementation.
+
+```cpp
+
+insertionSort(array, size) method:
+ - STEP 1   Apply for loop until ('size') times
+ - STEP 2   INITIALIZE var=arr[i]
+ - STEP 3   Apply for loop from (i-1,0)
+ - STEP 4   if (arr[j] > var):
+                   SET arr[j+1]=arr[j]
+ - STEP 5   else:
+                break
+ - STEP 5   SET arr[j+1]=var
+ [END OF LOOPS] 
+ - STEP 6    Apply for loop until (size-1)
+ - STEP 7    print array ``arr[]``
+ [END OF LOOP]
+ - STEP 8    EXIT
+end insertionSort()
+
+main() method:
+ - STEP 1    INITIALIZE array[]
+ - STEP 2    INITIALIZE and SET  size=6
+ - STEP 3    Call insertionSort() method
+end main()
+
+```
+
+## Time Complexity
+
+The time complexity of the insertion sort algorithm is O(n^2). Because the algorithm has two nested loops, each of which iterates n times.
+
+## Space Complexity
+
+The space complexity of the insertion sort algorithm is O(1) because the algorithm doesn't use any extra space for sorting.

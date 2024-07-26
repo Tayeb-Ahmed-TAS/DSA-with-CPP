@@ -16,7 +16,7 @@ From the above-given diagram, we can infer the following conclusions about the b
 
 ## Algorithm
 
-```ruby
+```Note
 We know that to sort a list of n elements using bubble sort, we need to perform n – 1 iterations. And for each iteration, we need to:
 
 1. Run a loop over the entire list or array.

@@ -36,6 +36,8 @@ int main() {
   return 0;
 }
 
+// Logic:
+
 //  -1   0    1   2   3   4   5 --> index
 //      12,| 54, 65, 07, 23, 09 --> i=1, current=54, prev=0
 //      12,| 54, 65, 07, 23, 09 --> 1st pass done (i=1)!

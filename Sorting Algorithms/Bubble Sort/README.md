@@ -2,7 +2,7 @@
 
 ## How it works?
 
-[![Bubble Sort](https://github.com/Tayeb-Ahmed-TAS/Images/blob/main/how-does-bubble-sort-algorithm-w.png)
+![Bubble Sort](https://github.com/Tayeb-Ahmed-TAS/Images/blob/main/how-does-bubble-sort-algorithm-w.png)
 
 From the above-given diagram, we can infer the following conclusions about the bubble sort algorithm –
 

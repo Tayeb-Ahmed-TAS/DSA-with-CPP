@@ -93,3 +93,11 @@ We can see from the diagram above,
 3. In the third pass, we compared all the elements except the last two. That means we compare 1 time (n-3 here, n = 4 & i = 2 so 4-3 = 1 and n-i-1 = 4-2-1 = 1)
 
 That’s why we use j < n - i - 1 in the inner loop.
+
+## Time Complexity
+
+The time complexity of the bubble sort algorithm is ***O(n^2)***. This is because the algorithm has two nested loops, each of which iterates ***n*** times.
+
+## Space Complexity
+
+The space complexity of the bubble sort algorithm is ***O(1)***. This is because the algorithm only requires a constant amount of extra space to store temporary variables.

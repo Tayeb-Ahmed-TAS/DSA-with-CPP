@@ -1,3 +1,5 @@
+// Insertion Sort: Increasing Order (Ascending Order)
+
 #include <iostream>
 
 using namespace std;
@@ -49,7 +51,8 @@ int main() {
 //      12, 54, 65,| 65, 23, 09 --> i=3, current=7, prev=1
 //      12, 54, 54,| 65, 23, 09 --> i=3, current=7, prev=0
 //      12, 12, 54,| 65, 23, 09 --> i=3, current=7, prev=-1
-//      07, 12, 54,| 65, 23, 09 --> i=3, current=7, prev=-1--> 3rd pass done (i=3)!
+//      07, 12, 54,| 65, 23, 09 --> i=3, current=7, prev=-1--> 3rd pass done
+//      (i=3)!
 
 // Fast forwarding and 4th and 5th pass will give:
 //      07, 12, 54, 65,| 23, 09 --> i=4, current=23, prev=3

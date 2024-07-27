@@ -60,27 +60,19 @@ After having a detailed explanation about the introduction and working of insert
 
 ```cpp
 
-insertionSort(array, size) method:
- - STEP 1   Apply for loop until ('size') times
- - STEP 2   INITIALIZE var=arr[i]
- - STEP 3   Apply for loop from (i-1,0)
- - STEP 4   if (arr[j] > var):
-                   SET arr[j+1]=arr[j]
- - STEP 5   else:
-                break
- - STEP 5   SET arr[j+1]=var
- [END OF LOOPS] 
- - STEP 6    Apply for loop until (size-1)
- - STEP 7    print array ``arr[]``
- [END OF LOOP]
- - STEP 8    EXIT
-end insertionSort()
+Step - 1. Start from the second element of the array.
 
-main() method:
- - STEP 1    INITIALIZE array[]
- - STEP 2    INITIALIZE and SET  size=6
- - STEP 3    Call insertionSort() method
-end main()
+Step - 2. Compare the current element with the previous element.
+
+Step - 3. If the current element is smaller than the previous element, then compare it with the previous element.
+
+Step - 4. If the current element is smaller than the previous element, then swap the current element with the previous element.
+
+Step - 5. Repeat the above steps until the current element is greater than the previous element.
+
+Step - 6. Repeat the above steps for all the elements of the array.
+
+Step - 7. Finally, the array will be sorted.
 
 ```
 

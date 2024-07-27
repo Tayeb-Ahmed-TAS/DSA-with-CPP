@@ -1,5 +1,11 @@
 # Selection Sort
 
+## key Idea
+
+Repeatedly find the minimum element from unsorted part and putting it at the beginning.
+
+We need to n-1 passes to sort n elements.
+
 ## How it works?
 
 The selection sort algorithm works in a way that it divides the list into two different lists, one is the unsorted list, and the other one is the sorted list. The sorted list exists on the left side, and the unsorted list exists on the right side. Initially, the sorted list will be empty, and the unsorted list will be filled with elements.

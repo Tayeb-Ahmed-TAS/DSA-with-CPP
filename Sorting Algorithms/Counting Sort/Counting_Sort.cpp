@@ -1,3 +1,5 @@
+// Counting Sort: Increasing Order (Ascending Order)
+
 #include <iostream>
 #include <vector>
 
@@ -15,12 +17,15 @@ void Counting_Sort(int *arr, int n) {
   vector<int> count_Array(largest + 1, 0);
   // size of this vector is largest + 1 and initialize all elements as 0.
 
+  // int *count = new int[largest + 1]{0};
+  // We can also use this method to create a dynamic array.
+
   // Update the count array according to the elements present in the input array
   for (int i = 0; i < n; i++) {
     count_Array[arr[i]]++;
   }
 
-  int j = 0; // It is for index;
+  int j = 0; // j is the index for the input array
 
   for (int i = 0; i <= largest; i++) {
     while (count_Array[i] > 0) {

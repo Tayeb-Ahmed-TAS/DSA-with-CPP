@@ -18,6 +18,11 @@ This makes it really fast when the range of numbers is not too big compared to t
 
 3. Assign the count of each element to their corresponding **index** in the count array.
 
+    - In the figure below, the lower numbers represents the array elements.
+    - And the upper numbers represents the count of the corresponding element. That means how many times the element appears in the given array.
+    - For example, The array don't have any ``0``, ``5`` and ``6``. That's why The count of ``0``, ``5`` and ``6`` is **0**.
+    - On the other hand, The array has ``1`` **2** times, ``2`` **1** time, ``3`` **2** times, ``4`` **2** times, ``7`` **2** times. So the count of ``1``, ``2``, ``3``, ``4`` and ``7`` is **2**, **1**, **2**, **2** and **2** respectively.
+
 ![Count Array 1](https://github.com/Tayeb-Ahmed-TAS/Images/blob/bc5d366ddb8fe86cea9300db3480cc756a69a340/count%20array%201.png)
 
 4. Calculate the cumulative **sum** of the elements in the count array. This cumulative **sum** assists in correctly positioning the elements in the sorted array.
@@ -27,3 +32,13 @@ This makes it really fast when the range of numbers is not too big compared to t
 5. Determine the index of each element from the original array in the count array, yielding the cumulative count. Place each element at the calculated index position in the sorted array, as illustrated in the figure below.
 
 ![Sorted Array](https://github.com/Tayeb-Ahmed-TAS/Images/blob/bc5d366ddb8fe86cea9300db3480cc756a69a340/sorted%20array.png)
+
+## Where is it used?
+
+- Counting Sort is used when the range of numbers in the array is known and is not significantly greater than the number of elements to be sorted.
+
+- Ex: Exam scores of students in a class, where the highest score is 100.
+
+## Time Complexity
+
+The time complexity of the Counting Sort Algorithm is ***O(Range + N)***

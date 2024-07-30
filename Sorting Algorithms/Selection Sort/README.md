@@ -60,11 +60,15 @@ The indexing always starts from the first unsorted element (Since previous eleme
 
 ```cpp
 
-Step - 1: First, we have to initialize the first index as the minimum (min_position; Here, min_position represents the current minimum element of the array).
+Step - 1: First, we have to initialize the first index as the minimum (min_position; Here, 
+        min_position represents the current minimum element of the array).
 
-Step - 2: After that, we traverse the remaining array to find the first minimum element of the array.
+Step - 2: After that, we traverse the remaining array to find the first 
+          minimum element of the array.
 
-Step - 3: As discussed, if any value is smaller than the current minimum element, we will swap their values. After swapping, we will update min_position to point to the next element.
+Step - 3: As discussed, if any value is smaller than the current minimum element, 
+          we will swap their values. After swapping, we will update min_position to 
+          point to the next element.
 
 Step - 4: We will repeat all the steps until the entire array becomes sorted.
 

@@ -31,3 +31,4 @@ A sorting algorithm is an algorithm that takes an array or a list as input and o
 |Quick Sort|O(n log n)|O(log n)|
 |Heap Sort|O(n log n)|O(1)|
 |Counting Sort|O(n + k)|O(n + k)|
+|In-Built Sort|O(n log n)|O(n)|

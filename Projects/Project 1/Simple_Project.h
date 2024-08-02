@@ -1,4 +1,7 @@
+// Purpose: Header file for Simple_Project.cpp
+#include <algorithm>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -96,9 +99,37 @@ void Selection_Sort(int *arr, int n) {
   display(arr, n);
 }
 
+void Counting_Sort(int arr[], int n) {
+  cout << "Counting Sort : " << endl;
+  int largest = -1;
+  for (int i = 0; i < n; i++) {
+    largest = max(largest, arr[i]);
+  }
+  vector<int> count(largest + 1, 0);
+  for (int i = 0; i < n; i++) {
+    count[arr[i]]++;
+  }
+  int j = 0;
+  for (int i = 0; i <= largest; i++) {
+    while (count[i] > 0) {
+      arr[j] = i;
+      count[i]--;
+      j++;
+    }
+  }
+  display(arr, n);
+}
+
+void In_Built_Sort(int *arr, int n) {
+  cout << "In-Built Sort : " << endl;
+  sort(arr, arr + n);
+  display(arr, n);
+}
+
 void User_Sorting_Selection(int *arr, int n) {
   char ch;
-  cout << "Enter (b)ubble, (i)nsertion, (s)election or (q)uit: ";
+  cout << "Enter (b)ubble, (i)nsertion, (s)election, (c)ounting, i(n)-built or "
+          "(q)uit: ";
   cin >> ch;
   if (ch == 'b') {
     Bubble_Sort(arr, n);
@@ -106,6 +137,10 @@ void User_Sorting_Selection(int *arr, int n) {
     Insertion_Sort(arr, n);
   } else if (ch == 's') {
     Selection_Sort(arr, n);
+  } else if (ch == 'c') {
+    Counting_Sort(arr, n);
+  } else if (ch == 'n') {
+    In_Built_Sort(arr, n);
   } else if (ch == 'q') {
     cout << "Quitting..." << endl;
   } else {
@@ -143,14 +178,4 @@ void User_Selection(int *arr, int n) {
   } else {
     cout << "Invalid Input" << endl;
   }
-}
-
-int main() {
-
-  int arr[] = {-2, 3, 4, -1, 5, -12, 6, 1, 3};
-  int n = sizeof(arr) / sizeof(int);
-
-  User_Selection(arr, n);
-
-  return 0;
 }

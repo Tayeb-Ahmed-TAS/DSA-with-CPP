@@ -72,6 +72,7 @@ int main() {
   char route[1000];
 
   cout << "Enter the route: ";
+  
   cin.getline(route, 1000);
 
   Shortest_Route_Axis(route);

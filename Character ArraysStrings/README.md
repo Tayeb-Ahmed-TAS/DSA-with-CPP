@@ -39,3 +39,35 @@ char arr[100];
 cin.get(arr, 100); // Reads a line of text including spaces upto 100 characters
 
 ```
+
+## cin.getline()
+
+cin.getline() reads a line of text from the input buffer.
+
+cin.getline() is used to read white spaces and new lines which cin cannot read.
+
+```cpp
+
+char arr[100];
+
+cin.getline(arr, 100); // arr is the name of the array and 100 is the size of the array
+
+```
+
+- This can read only one line of text. When the user presses enter, the input is terminated.
+
+```cpp
+
+char arr[100];
+
+cin.getline(arr, 100, '.'); // Reads a line of text including spaces upto 100 characters or until a '.' is encountered
+
+```
+
+- This can read multiple lines of text.
+
+- '.' is the delimiter.
+
+- The input will stop when the delimiter is encountered. (Press '.' and then enter)
+
+- We can use anything as a delimiter.

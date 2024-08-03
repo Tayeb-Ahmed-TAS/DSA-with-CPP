@@ -1,6 +1,6 @@
 # Find Displacement
 
-## Givem a lomg route containing N,S,E,W directions, find the shortest path to reach the location(destination)
+## Given a lomg route containing N,S,E,W directions, find the shortest path to reach the location(destination)
 
 ## Understanding the problem
 

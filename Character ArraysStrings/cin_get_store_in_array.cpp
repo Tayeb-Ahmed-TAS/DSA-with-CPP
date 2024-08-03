@@ -15,6 +15,8 @@ int main() {
     temp = cin.get();
   }
 
+  arr[len] = '\0';
+
   cout << arr << endl;
 
   cout << "Length: " << len << endl;

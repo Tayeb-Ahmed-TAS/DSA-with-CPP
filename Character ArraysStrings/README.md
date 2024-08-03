@@ -17,3 +17,25 @@ char arr[100] = {'a', 'b', 'c', '\0'}; // Right (Recommended)
 char arr[100] = "abc"; // It automatically adds '\0' (null character) at the end
 
 ```
+
+## cin.get()
+
+cin.get() reads a single character from the input buffer.
+
+cin.get() is used to read white spaces and new lines which cin cannot read.
+
+```cpp
+
+char arr[100];
+
+cin.get(arr); // Reads a line of text including spaces
+
+```
+
+```cpp
+
+char arr[100];
+
+cin.get(arr, 100); // Reads a line of text including spaces upto 100 characters
+
+```

@@ -29,7 +29,7 @@ string stringCompressed(string str) {
                                 // is used to convert integer to string
   }
 
-  if (output.length() > n) {
+  if (output.length() < str.length()) {
     return str;
   }
   return output;
@@ -40,7 +40,7 @@ int main() {
   string s1 = "aaabbccddee";
   cout << stringCompressed(s1) << endl;
 
-  string s2 = "abcd";
+  string s2 = "aabbcd";
   cout << stringCompressed(s2) << endl;
 
   return 0;

@@ -19,7 +19,7 @@ string stringCompressed(string str) {
   for (int i = 0; i < n; i++) {
     int count = 1; // Initialize count to 1
 
-    while (i < n - 1 and str[i + 1] == str[i]) {
+    while (i < n - 1 and str[i] == str[i + 1]) {
       count++;
       i++;
     }

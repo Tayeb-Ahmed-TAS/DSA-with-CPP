@@ -52,3 +52,13 @@ To solve this problem, we need 4 variables (StartRow, EndRow, StartCol, EndCol).
     4. EndCol--
 
 4. Repeat the above steps until StartRow <= EndRow and StartCol <= EndCol
+
+## Identify Rows and Columns for better understanding
+
+- Identify the rows by following figure
+
+![Rows](https://github.com/Tayeb-Ahmed-TAS/Images/blob/0c60d3fb2fdc326a8bd3cb7800babb4350e363da/rows.png)
+
+- Identify the columns by following figure
+
+![Columns](https://github.com/Tayeb-Ahmed-TAS/Images/blob/0c60d3fb2fdc326a8bd3cb7800babb4350e363da/Columns.png)

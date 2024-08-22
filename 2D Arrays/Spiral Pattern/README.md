@@ -25,4 +25,30 @@ Write a function that takes n x m 2D Array, and prints the all array elements in
 
 ## How to solve
 
-To solve this problem, we need 4 variables ()
+To solve this problem, we need 4 variables (StartRow, EndRow, StartCol, EndCol).
+
+![Spiral Solve 1](https://github.com/Tayeb-Ahmed-TAS/Images/blob/b85dec2c48ab09b6073037ba2b54fa2d98b3eebe/spiral1.png)
+
+1. StartRow = 0, EndRow = row-1, StartCol = 0, EndCol = col-1
+
+2. Loop until StartRow <= EndRow and StartCol <= EndCol
+
+    1. Print the elements of StartRow from StartCol to EndCol `StartRow(StartCol to EndCol)`
+
+    2. Then Print the elements of EndCol from StartRow+1 to EndRow `EndCol(StartRow+1 to EndRow)`
+
+    3. Then Print the elements of EndRow from EndCol-1 to StartCol `EndRow(EndCol-1 to StartCol)`
+
+    4. Then Print the elements of StartCol from EndRow-1 to StartRow+1 `StartCol(EndRow-1 to StartRow+1)`
+
+3. Updating the variables to print the inner spiral
+
+    1. StartRow++
+
+    2. EndRow--
+
+    3. StartCol++
+
+    4. EndCol--
+
+4. Repeat the above steps until StartRow <= EndRow and StartCol <= EndCol

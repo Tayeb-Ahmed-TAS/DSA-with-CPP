@@ -22,3 +22,7 @@ Write a function that takes n x m 2D Array, and prints the all array elements in
 ```
 
 ![Spiral](https://github.com/Tayeb-Ahmed-TAS/Images/blob/d80b5a5bb9eb92566e41dabb7c40d617bbcf01ef/spiral.png)
+
+## How to solve
+
+To solve this problem, we need 4 variables ()

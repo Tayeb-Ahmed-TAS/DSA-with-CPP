@@ -8,7 +8,7 @@ It is a powerful feature of C++ that allows you to work with memory at a low lev
 
 ### Declaring Pointers
 
-To declare a pointer, we use an asterisk (*) between the datatype and the variable name.
+To declare a pointer, we use an asterisk `*` between the datatype and the variable name.
 
 ```cpp
 

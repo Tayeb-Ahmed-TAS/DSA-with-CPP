@@ -30,8 +30,9 @@ int main() {
 
   vector<int> arr2(10, 7); // Creates a vector of size 10 with all elements as 7
 
-  for (int i = 0; i < arr2.size(); i++) {
-    cout << arr2[i] << " ";
+  for (int number : arr2) {
+    // for each loop
+    cout << number << " ";
   }
 
   return 0;

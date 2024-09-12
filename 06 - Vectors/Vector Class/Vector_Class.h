@@ -72,15 +72,17 @@ public:
   }
 
   int operator[](const int i) const { return arr[i]; }
-
-  // Points to remember
-  // 1. use const when we don't change the parameters like i++ or i--
-  // 2. use const function when we don't change the data members of the class
-  // that means the function is not going to change the data members of the
-  // class
-  // 3. In push_back function we are not using const because we are modifying
-  // the array
-  // 4. In pop_back function we are not using const because we are modifying the
-  // cs (cs--)
-  // These are good practices to follow
 };
+
+// Points to remember
+// 1. use const when we don't change the parameters like i++ or i--
+// 2. use const function when we don't change the data members of the class
+// that means the function is not going to change the data members of the
+// class
+// 3. In push_back function we are not using const because we are modifying
+// the array
+// 4. In pop_back function we are not using const because we are modifying the
+// cs (cs--)
+// i. If we modify the data members of the class that use const the compiler
+// will give an error message !!!!
+//  These are good practices to follow

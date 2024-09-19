@@ -29,3 +29,7 @@ int main() {
 
   return 0;
 }
+
+// Note:
+// arr.begin() is 10
+// arr.end() is next to 8

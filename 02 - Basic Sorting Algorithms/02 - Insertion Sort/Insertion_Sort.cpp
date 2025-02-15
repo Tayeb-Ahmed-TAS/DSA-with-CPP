@@ -25,7 +25,7 @@ void Insertion_Sort(int arr[], int n) {
 
 int main() {
 
-  int arr[]{12, 54, 65, 7, 23, 9};
+  int arr[] = {12, 54, 65, 7, 23, 9};
   int n = sizeof(arr) / sizeof(int);
 
   Insertion_Sort(arr, n);

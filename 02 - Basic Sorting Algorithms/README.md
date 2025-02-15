@@ -32,3 +32,13 @@ A sorting algorithm is an algorithm that takes an array or a list as input and o
 |Heap Sort|O(n log n)|O(1)|
 |Counting Sort|O(n + k)|O(n + k)|
 |In-Built Sort|O(n log n)|O(n)|
+
+## Which Sorting Algorithm is Best?
+
+It depends on the size of the input array and the type of data.
+
+- **For general-purpose sorting:** Quick Sort (or Tim Sort for built-in sorting functions).
+- **For large datasets with stability needs:** Merge Sort.
+- **For nearly sorted data:** Insertion Sort.
+- **For small datasets:** Insertion Sort or Selection Sort.
+- **For integer sorting within a known range:** Counting Sort or Radix Sort.

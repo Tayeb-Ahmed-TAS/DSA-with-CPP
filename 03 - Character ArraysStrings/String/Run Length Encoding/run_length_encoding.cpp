@@ -29,6 +29,9 @@ string stringCompressed(string str) {
                                 // is used to convert integer to string
   }
 
+  // If the compressed string is longer than the original string, return the
+  // original string because if the compressed string is longer than the
+  // original string, that means our compression is not working
   if (output.length() > str.length()) {
     return str;
   }

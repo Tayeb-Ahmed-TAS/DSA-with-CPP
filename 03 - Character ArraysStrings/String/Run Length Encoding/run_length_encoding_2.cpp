@@ -32,7 +32,14 @@ string stringCompressed(string str) {
       output += to_string(count);
     }
   }
-  
+
+  // If the compressed string is longer than the original string, return the
+  // original string because if the compressed string is longer than the
+  // original string, that means our compression is not working
+  if (output.length() > str.length()) {
+    return str;
+  }
+
   return output;
 }
 

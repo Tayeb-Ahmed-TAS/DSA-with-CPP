@@ -236,3 +236,77 @@ The right shift operation is equivalent to dividing the number by 2^n, where n i
 ## 1.2. Bit Manipulation Tricks
 
 ### 1.2.1. Check if a Number is Even or Odd
+
+To check if a number is even or odd, we can use the bitwise AND operator **&**.
+
+***If the last bit of the number is 0, then the number is even. If the last bit of the number is 1, then the number is odd.***
+
+### Explanation
+
+```Explanation
+
+5 is an odd number.
+
+Because 5 is represented as 0 0 0 0 0 1 0 1.
+
+The last bit of the number is 1. So, 5 is an odd number.
+
+```
+
+```Explanation
+
+Same way,
+
+6 is an even number.
+
+Because 6 is represented as 0 0 0 0 0 1 1 0.
+
+Where the last bit of the number is 0. So, 6 is an even number.
+
+```
+
+**```We can clearly see that the last bit of any number decides whether the number is even or odd.```**
+
+### Example
+
+```cpp
+
+int a = 5;
+
+if (a & 1) {
+    cout << "Odd" << endl;
+} else {
+    cout << "Even" << endl;
+}
+
+```
+
+### Output
+
+```Output
+
+Odd
+
+```
+
+### Explanation of the Example
+
+```Explanation
+
+      5 = 0 0 0 0 0 1 0 1
+    & 1 = 0 0 0 0 0 0 0 1
+    ---------------------
+          0 0 0 0 0 0 0 1
+
+The last bit of the result is 1. So, the number is odd.
+
+Same ways,
+
+          6 = 0 0 0 0 0 1 1 0
+        & 1 = 0 0 0 0 0 0 0 1
+        ---------------------
+              0 0 0 0 0 0 0 0
+
+The last bit of the result is 0. So, the number is even.
+
+```

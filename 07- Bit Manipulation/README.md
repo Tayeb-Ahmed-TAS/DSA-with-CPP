@@ -158,3 +158,81 @@ Here the value of a is 0. 0 is represented as 32 bits in the memory. When we do 
 000... ...00 -> 32 bits
 
 111... ...11 -> 32 bits
+
+## Binary Left Shift (<<) Operator
+
+The **<<** operator is a bitwise operator that performs a bitwise left shift operation on an integer. The result of the operation is a new integer where the bits are shifted to the left by a specified number of positions.
+
+The left shift operation is equivalent to multiplying the number by 2^n, where n is the number of positions to shift.
+
+### Example
+
+```cpp
+
+5 << 2 = 20
+
+     5 = 0 0 0 0 0 1 0 1
+5 << 2 = 0 0 0 1 0 1 0 0 = 20
+
+// That means it shifts all the bits to the left by 2 positions.
+// Last two bits are filled with 0s.
+// It is equivalent to multiplying the number by 2^2 = 4.
+
+```
+
+### Explanation
+
+```Explanation
+
+    a << b  is equivalent to  a * 2^b
+
+    That means, 
+
+        a << b = a * 2^b
+
+    Same as,
+
+        5 << 2 = 5 * 2^2 = 5 * 4 = 20
+
+```
+
+## Binary Right Shift (>>) Operator
+
+The **>>** operator is a bitwise operator that performs a bitwise right shift operation on an integer. The result of the operation is a new integer where the bits are shifted to the right by a specified number of positions.
+
+The right shift operation is equivalent to dividing the number by 2^n, where n is the number of positions to shift.
+
+### Example
+
+```cpp
+
+20 >> 2 = 5
+
+     20 = 0 0 0 1 0 1 0 0
+20 >> 2 = 0 0 0 0 0 1 0 1 = 5
+
+// That means it shifts all the bits to the right by 2 positions.
+// First two bits from the right are removed.
+// It is equivalent to dividing the number by 2^2 = 4.
+
+```
+
+### Explanation
+
+```Explanation
+
+    a >> b  is equivalent to  a / 2^b
+
+    That means, 
+
+        a >> b = a / 2^b
+
+    Same as,
+
+        20 >> 2 = 20 / 2^2 = 20 / 4 = 5
+
+```
+
+## 1.2. Bit Manipulation Tricks
+
+### 1.2.1. Check if a Number is Even or Odd

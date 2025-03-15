@@ -310,3 +310,84 @@ Same ways,
 The last bit of the result is 0. So, the number is even.
 
 ```
+
+### 1.2.2. Common Operations
+
+#### 1.2.2.1 Get ith Bit
+
+To get the ith bit of a number, we can use the bitwise AND operator **&**.
+
+***If the result of the operation is 1, then the ith bit of the number is 1. If the result of the operation is 0, then the ith bit of the number is 0.***
+
+### Bit Position
+
+```Bit Position
+
+Position:  7 6 5 4 3 2 1 0
+     5 ->  0 0 0 0 0 1 0 1
+
+```
+
+### Example
+
+```cpp
+
+int a = 5; // 0 0 0 0 0 1 0 1
+
+int i = 2; // Position of the bit
+
+int mask = 1 << i; // 0 0 0 0 0 1 0 0
+
+if (a & mask) {
+    cout << 1 << endl;
+} else {
+    cout << 0 << endl;
+}
+
+```
+
+### Output
+
+```Output
+
+1
+
+```
+
+### Explanation of the Example
+
+```Explanation
+
+We Know,
+
+        5 = 0 0 0 0 0 1 0 1
+        1 = 0 0 0 0 0 0 0 1
+
+For the number 5, the 2nd bit is 1.
+
+               5 = 0 0 0 0 0 1 0 1
+        & 1 << 2 = 0 0 0 0 0 1 0 0
+        ---------------------------
+                   0 0 0 0 0 1 0 0
+
+The result is 1. So, the 2nd bit of the number 5 is 1.
+
+Same way,
+
+For the number 5, the 1st bit is 0.
+
+               5 = 0 0 0 0 0 1 0 1
+        & 1 << 1 = 0 0 0 0 0 0 1 0
+        ---------------------------
+                   0 0 0 0 0 0 0 0
+
+The result is 0. So, the 1st bit of the number 5 is 0.
+
+
+```
+
+#### 1.2.2.2 Set ith Bit
+
+To set the ith bit of a number, we can use the bitwise OR operator **|**.
+
+***If the result of the operation is 1, then the ith bit of the number is set to 1. If the result of the operation is 0, then the ith bit of the number is set to 0.***

@@ -391,3 +391,56 @@ The result is 0. So, the 1st bit of the number 5 is 0.
 To set the ith bit of a number, we can use the bitwise OR operator **|**.
 
 ***If the result of the operation is 1, then the ith bit of the number is set to 1. If the result of the operation is 0, then the ith bit of the number is set to 0.***
+
+### Bit Position
+
+```Bit Position
+
+Position:  7 6 5 4 3 2 1 0
+     5 ->  0 0 0 0 0 1 0 1
+
+```
+
+### Example
+
+```cpp
+
+int a = 5; // 0 0 0 0 0 1 0 1
+
+int i = 3; // Position of the bit
+
+int mask = 1 << i; // 0 0 0 0 1 0 0 0
+
+a = a | mask; // 0 0 0 0 1 1 0 1
+
+cout << a << endl;
+
+```
+
+### Output
+
+```Output
+
+13
+
+```
+
+### Explanation of the Example
+
+```Explanation
+
+We Know,
+
+        5 = 0 0 0 0 0 1 0 1
+        1 = 0 0 0 0 0 0 0 1
+
+For the number 5, the 3rd bit is 0.
+
+               5 = 0 0 0 0 0 1 0 1
+        | 1 << 3 = 0 0 0 0 1 0 0 0
+        ---------------------------
+                   0 0 0 0 1 1 0 1
+
+The result is 13. because, the 3rd bit of the number 5 is set to 1.
+
+```

@@ -362,6 +362,7 @@ We Know,
 
         5 = 0 0 0 0 0 1 0 1
         1 = 0 0 0 0 0 0 0 1
+     1<<2 = 0 0 0 0 0 1 0 0
 
 For the number 5, the 2nd bit is 1.
 
@@ -391,15 +392,6 @@ The result is 0. So, the 1st bit of the number 5 is 0.
 To set the ith bit of a number, we can use the bitwise OR operator **|**.
 
 ***If the result of the operation is 1, then the ith bit of the number is set to 1. If the result of the operation is 0, then the ith bit of the number is set to 0.***
-
-### Bit Position
-
-```Bit Position
-
-Position:  7 6 5 4 3 2 1 0
-     5 ->  0 0 0 0 0 1 0 1
-
-```
 
 ### Example
 
@@ -433,6 +425,7 @@ We Know,
 
         5 = 0 0 0 0 0 1 0 1
         1 = 0 0 0 0 0 0 0 1
+     1<<3 = 0 0 0 0 1 0 0 0
 
 For the number 5, the 3rd bit is 0.
 
@@ -444,3 +437,59 @@ For the number 5, the 3rd bit is 0.
 The result is 13. because, the 3rd bit of the number 5 is set to 1.
 
 ```
+
+#### 1.2.2.3 Clear ith Bit
+
+To clear the ith bit of a number, we can use the bitwise AND operator **&**.
+
+***If the result of the operation is 1, then the ith bit of the number is 1. If the result of the operation is 0, then the ith bit of the number is 0.***
+
+We can use the bitwise NOT operator **~** to create the mask. Because the NOT operator inverts all the bits of the number. So that we can create a mask with all the bits set to 1 except the ith bit. As a result, the ith bit of the mask is 0.
+
+### Example
+
+```cpp
+
+int a = 13; // 0 0 0 0 1 1 0 1
+
+int i = 3; // Position of the bit
+
+int mask = ~(1 << i); // 1 1 1 1 0 1 1 1
+
+a = a & mask; // 0 0 0 0 0 1 0 1
+
+cout << a << endl;
+
+```
+
+### Output
+
+```Output
+
+5
+
+```
+
+### Explanation of the Example
+
+```Explanation
+
+We Know,
+
+        13 = 0 0 0 0 1 1 0 1
+         1 = 0 0 0 0 0 0 0 1
+      1<<3 = 0 0 0 0 1 0 0 0
+     ~1<<3 = 1 1 1 1 0 1 1 1
+
+For the number 13, the 3rd bit is 1.
+
+                 13 = 0 0 0 0 1 1 0 1
+        & ~(1 << 3) = 1 1 1 1 1 0 1 1
+        ------------------------------
+                      0 0 0 0 0 1 0 1
+
+The result is 5. because, the 3rd bit of the number 13 is cleared.
+
+```
+
+#### 1.2.2.4 Update ith Bit

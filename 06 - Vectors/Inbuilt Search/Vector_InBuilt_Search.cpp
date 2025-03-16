@@ -27,6 +27,11 @@ int main() {
     cout << "Item not found" << endl;
   }
 
+  // or
+
+  // (index == arr.size()) ? cout << "Element not found"
+  //                       : cout << "Element found at index " << index;
+
   return 0;
 }
 

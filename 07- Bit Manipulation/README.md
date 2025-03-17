@@ -493,3 +493,69 @@ The result is 5. because, the 3rd bit of the number 13 is cleared.
 ```
 
 #### 1.2.2.4 Update ith Bit
+
+We've to combine the set and clear operations to update the ith bit of a number.
+
+### Example
+
+```cpp
+
+int a = 13; // 0 0 0 0 1 1 0 1
+
+int i = 4; // Position of the bit
+
+int v = 1; // Value to set 0 or 1 (0 0 0 0 0 0 0 1)
+
+// Clear the ith bit
+
+int mask = ~(1 << i); // 1 1 1 0 1 1 1 1
+
+a = a & mask; // 0 0 0 0 1 1 0 1
+
+// Set the ith bit (update)
+
+mask = v << i; // 0 0 0 1 0 0 0 0
+
+a = a | mask; // 0 0 0 1 1 1 0 1
+
+cout << a << endl;
+
+```
+
+### Output
+
+```Output
+
+29
+
+```
+
+### Explanation of the Example
+
+```Explanation
+
+We Know,
+
+        13 = 0 0 0 0 1 1 0 1
+         1 = 0 0 0 0 0 0 0 1
+      1<<4 = 0 0 0 1 0 0 0 0 (for 1 << i)
+     ~1<<4 = 1 1 1 0 1 1 1 1 (for ~(1 << i))
+      1<<4 = 0 0 0 1 0 0 0 0 (for v << i)
+
+Now for clear ith bit,
+
+                     13 = 0 0 0 0 1 1 0 1
+            & ~(1 << 4) = 1 1 1 0 1 1 1 1
+            ------------------------------
+                          0 0 0 0 1 1 0 1 (for a & mask) = 13
+
+Now for set ith bit (update),
+
+                        13 = 0 0 0 0 1 1 0 1
+                    | 1<<4 = 0 0 0 1 0 0 0 0
+                ------------------------------
+                            0 0 0 1 1 1 0 1 (for a | mask) = 29
+
+The result is 29. because, the 4th bit of the number 13 is updated to 1.
+
+```

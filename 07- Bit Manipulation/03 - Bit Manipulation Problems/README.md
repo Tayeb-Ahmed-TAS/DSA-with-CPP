@@ -72,3 +72,39 @@ int main() {
 1108
 
 ```
+
+### Explanation
+
+```cpp
+
+Let, n = 15;
+     m = 2;
+     i = 1;
+     j = 3;
+
+We know,
+
+  Bit Poisition =  7 6 5 4 3 2 1 0
+            n   =  0 0 0 0 1 1 1 1
+            m   =  0 0 0 0 0 0 1 0
+
+After clearing the bits between i and j in n,
+
+    Bit Poisition   =  7 6 5 4 3 2 1 0
+                n   =  0 0 0 0 0 0 0 1
+
+After left shifting m by i positions,
+
+    Bit Poisition   =  7 6 5 4 3 2 1 0
+                m   =  0 0 0 0 0 1 0 0
+
+After performing OR (|) operation between left-shifted m and cleared n,
+
+                  n  =  0 0 0 0 0 0 0 1
+                | m  =  0 0 0 0 0 1 0 0
+                -----------------------
+                  n  =  0 0 0 0 0 1 0 1
+
+The new value of n is 5.
+
+```

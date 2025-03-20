@@ -315,8 +315,8 @@ The last bit of the result is 0. So, the number is even.
 
 ### 1.2.2. Common Operations
 
-For more information on common bit manipulation operations, refer to the [Common Operations](../02%20-%20Common%20Operations).
+For more information on common bit manipulation operations, refer to the [Common Operations](../02 - Common Operations).
 
 ### 1.2.3. Bit Manipulation Problems
 
-For more information on bit manipulation problems, refer to the [Bit Manipulation Problems](../03%20-%20Bit%20Manipulation%20Problems).
+For more information on bit manipulation problems, refer to the [Bit Manipulation Problems](../03 - Bit Manipulation Problems).

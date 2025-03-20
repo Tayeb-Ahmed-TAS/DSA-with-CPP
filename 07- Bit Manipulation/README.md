@@ -315,8 +315,8 @@ The last bit of the result is 0. So, the number is even.
 
 ### 1.2.2. Common Operations
 
-For more information on common bit manipulation operations, refer to the [Common Operations](../02 - Common Operations).
+For more information on common bit manipulation operations, refer to the [02 - Common Operations](https://github.com/Tayeb-Ahmed-TAS/DSA-with-CPP/tree/main/07-%20Bit%20Manipulation/02%20-%20Common%20Operations).
 
 ### 1.2.3. Bit Manipulation Problems
 
-For more information on bit manipulation problems, refer to the [Bit Manipulation Problems](../03 - Bit Manipulation Problems).
+For more information on bit manipulation problems, refer to the [03 - Bit Manipulation Problems](https://github.com/Tayeb-Ahmed-TAS/DSA-with-CPP/tree/main/07-%20Bit%20Manipulation/03%20-%20Bit%20Manipulation%20Problems).

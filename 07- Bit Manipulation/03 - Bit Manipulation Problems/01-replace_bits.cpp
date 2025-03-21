@@ -1,3 +1,7 @@
+// You are given two 32-bit numbers, N and M, and two bit positions i and j.
+// Write a method to set all bits between i and j in N equal to M.
+// M (becomes a substring of N locationed at and starting at j).
+
 #include <iostream>
 
 using namespace std;

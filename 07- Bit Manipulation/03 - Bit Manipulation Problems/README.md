@@ -108,3 +108,123 @@ After performing OR (|) operation between left-shifted m and cleared n,
 The new value of n is 5.
 
 ```
+
+## 1.2.3.2 Power of Two
+
+### Problem Statement
+
+Given an integer, write a function to determine if it is a power of two.
+
+### Example
+
+```cpp
+
+Input 1  : 16
+
+Output 1 : true
+
+Input 2  : 218
+
+Output 2 : false
+
+```
+
+### Solution
+
+For this problem,
+
+1. If N is a power of 2, then N & (N - 1) will be 0.
+
+2. If N is not a power of 2, then N & (N - 1) will not be 0.
+
+Beacuse,
+
+- Let N = 16, then N - 1 = 15.
+
+- 16 is look like 10000 and 15 is look like 01111.
+
+- N & (N - 1) = 00000.
+
+- As the result is 0 so, 16 is a power of 2.
+
+Similarly,
+
+- Let N = 15, then N - 1 = 14.
+
+- 15 is look like 01111 and 14 is look like 01110.
+
+- N & (N - 1) = 01110.
+
+- As the result is not 0 so, 15 is not a power of 2.
+
+```cpp
+
+int n = 16;
+
+if ((n & (n - 1)) == 0) {
+  cout << "Power of 2" << endl;
+} else {
+  cout << "Not power of 2" << endl;
+}
+
+```
+
+```or,```
+
+```cpp
+
+bool isPowerOfTwo(int n) {
+  return n > 0 && (n & (n - 1)) == 0;
+}
+
+int main() {
+  int n = 16;
+
+  if (isPowerOfTwo(n)) {
+    cout << "Power of 2" << endl;
+  } else {
+    cout << "Not power of 2" << endl;
+  }
+
+  return 0;
+}
+
+```
+
+### Output
+
+```cpp
+
+Power of 2
+
+```
+
+### Explanation
+
+```cpp
+
+Let, n = 16;
+
+We know,
+
+        N   = 16 = 0 0 0 1 0 0 0 0
+        N-1 = 15 = 0 0 0 0 1 1 1 1
+      --------------------------------
+N & (N - 1) =  0 = 0 0 0 0 0 0 0 0
+
+As the result is 0 so, 16 is a power of 2.
+
+Similarly,
+
+Let, n = 15;
+
+We know,
+
+        N   = 15 = 0 0 0 0 1 1 1 1
+        N-1 = 14 = 0 0 0 0 1 1 1 0
+      --------------------------------
+N & (N - 1) = 14 = 0 0 0 0 1 1 1 0
+
+As the result is not 0 so, 15 is not a power of 2.
+
+```

@@ -21,6 +21,8 @@ vii. Binary One's Complement **(~)**: The one's complement of a binary number is
 
 viii. Binary Two's Complement: The two's complement of a binary number is the value obtained by subtracting the number from 2^n, where n is the number of bits in the binary representation of the number.
 
+----------------------------------------
+
 ## Binary AND (&) Operator
 
 The **&** operator is a bitwise operator that performs a bitwise AND operation between two integers. The result of the operation is a new integer where each bit is set to 1 only if both bits in the corresponding input integers are 1.
@@ -50,6 +52,8 @@ The following table shows the result of the **&** operation for all possible com
 
 ```
 
+----------------------------------------
+
 ## Binary OR (|) Operator
 
 The **|** operator is a bitwise operator that performs a bitwise OR operation between two integers. The result of the operation is a new integer where each bit is set to 1 if at least one of the bits in the corresponding input integers is 1.
@@ -78,6 +82,8 @@ The following table shows the result of the **|** operation for all possible com
 // That means it calculates the OR of each bit of the two numbers.
 
 ```
+
+----------------------------------------
 
 ## Binary XOR (^) Operator
 
@@ -109,6 +115,8 @@ The following table shows the result of the **^** operation for all possible com
 // That means it calculates the XOR of each bit of the two numbers.
 
 ```
+
+----------------------------------------
 
 ## Binary NOT (~) Operator
 
@@ -159,6 +167,8 @@ Here the value of a is 0. 0 is represented as 32 bits in the memory. When we do 
 
 111... ...11 -> 32 bits
 
+----------------------------------------
+
 ## Binary Left Shift (<<) Operator
 
 The **<<** operator is a bitwise operator that performs a bitwise left shift operation on an integer. The result of the operation is a new integer where the bits are shifted to the left by a specified number of positions.
@@ -196,6 +206,8 @@ The left shift operation is equivalent to multiplying the number by 2^n, where n
 
 ```
 
+----------------------------------------
+
 ## Binary Right Shift (>>) Operator
 
 The **>>** operator is a bitwise operator that performs a bitwise right shift operation on an integer. The result of the operation is a new integer where the bits are shifted to the right by a specified number of positions.
@@ -232,6 +244,8 @@ The right shift operation is equivalent to dividing the number by 2^n, where n i
         20 >> 2 = 20 / 2^2 = 20 / 4 = 5
 
 ```
+
+----------------------------------------
 
 ## 1.2. Bit Manipulation Tricks
 
@@ -311,12 +325,18 @@ The last bit of the result is 0. So, the number is even.
 
 ```
 
+----------------------------------------
+
 ### 1.2.2. Common Operations
 
 ### 1.2.2. Common Operations
 
 For more information on common bit manipulation operations, refer to the [02 - Common Operations](https://github.com/Tayeb-Ahmed-TAS/DSA-with-CPP/tree/main/07-%20Bit%20Manipulation/02%20-%20Common%20Operations).
 
+----------------------------------------
+
 ### 1.2.3. Bit Manipulation Problems
 
 For more information on bit manipulation problems, refer to the [03 - Bit Manipulation Problems](https://github.com/Tayeb-Ahmed-TAS/DSA-with-CPP/tree/main/07-%20Bit%20Manipulation/03%20-%20Bit%20Manipulation%20Problems).
+
+----------------------------------------

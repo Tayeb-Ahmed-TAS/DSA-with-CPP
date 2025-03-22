@@ -4,7 +4,7 @@
 
 To get the ith bit of a number, we can use the bitwise AND operator **&**.
 
-***If the result of the operation is 1, then the ith bit of the number is 1. If the result of the operation is 0, then the ith bit of the number is 0.***
+**_If the result of the operation is 1, then the ith bit of the number is 1. If the result of the operation is 0, then the ith bit of the number is 0._**
 
 ### Bit Position
 
@@ -74,11 +74,13 @@ The result is 0. So, the 1st bit of the number 5 is 0.
 
 ```
 
+---
+
 ## 1.2.2.2 Set ith Bit
 
 To set the ith bit of a number, we can use the bitwise OR operator **|**.
 
-***If the result of the operation is 1, then the ith bit of the number is set to 1. If the result of the operation is 0, then the ith bit of the number is set to 0.***
+**_If the result of the operation is 1, then the ith bit of the number is set to 1. If the result of the operation is 0, then the ith bit of the number is set to 0._**
 
 ### Example
 
@@ -125,11 +127,13 @@ The result is 13. because, the 3rd bit of the number 5 is set to 1.
 
 ```
 
+---
+
 ## 1.2.2.3 Clear ith Bit
 
 To clear the ith bit of a number, we can use the bitwise AND operator **&**.
 
-***If the result of the operation is 1, then the ith bit of the number is 1. If the result of the operation is 0, then the ith bit of the number is 0.***
+**_If the result of the operation is 1, then the ith bit of the number is 1. If the result of the operation is 0, then the ith bit of the number is 0._**
 
 We can use the bitwise NOT operator **~** to create the mask. Because the NOT operator inverts all the bits of the number. So that we can create a mask with all the bits set to 1 except the ith bit. As a result, the ith bit of the mask is 0.
 
@@ -178,6 +182,8 @@ For the number 13, the 3rd bit is 1.
 The result is 5. because, the 3rd bit of the number 13 is cleared.
 
 ```
+
+---
 
 ## 1.2.2.4 Update ith Bit
 
@@ -247,6 +253,8 @@ The result is 29. because, the 4th bit of the number 13 is updated to 1.
 
 ```
 
+---
+
 ## 1.2.2.5 Clear Last i Bits
 
 To clear the last i bits of a number, we can use the bitwise AND operator **&**.
@@ -314,6 +322,8 @@ For the number 13, the last 3 bits are 101.
 The result is 8. because, the last 3 bits of the number 13 are cleared.
 
 ```
+
+---
 
 ## 1.2.2.6 Clear Range of Bits
 
@@ -411,3 +421,5 @@ For the number 13, the bits from 1 to 3 are 101.
 The result is 1. because, the bits from 1 to 3 of the number 13 are cleared.
 
 ```
+
+---

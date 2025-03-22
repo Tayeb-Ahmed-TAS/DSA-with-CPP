@@ -109,6 +109,8 @@ The new value of n is 5.
 
 ```
 
+----------------------------------------
+
 ## 1.2.3.2 Power of Two
 
 ### Problem Statement
@@ -169,7 +171,7 @@ if ((n & (n - 1)) == 0) {
 
 ```
 
-```or,```
+`or,`
 
 ```cpp
 
@@ -228,3 +230,95 @@ N & (N - 1) = 14 = 0 0 0 0 1 1 1 0
 As the result is not 0 so, 15 is not a power of 2.
 
 ```
+
+----------------------------------------
+
+## 1.2.3.3 Count Set Bits
+
+### Problem Statement
+
+Write a function that takes an integer and returns the number of bits that are set to 1 in the integer.
+
+### Example
+
+```cpp
+
+Input 1  : 15 // 1111
+
+Output 1 : 4
+
+Input 2  : 16 // 10000
+
+Output 2 : 1
+
+```
+
+### Solution
+
+For this problem,
+
+1. We can count the number of set bits in an integer by using the & operator.
+
+2. We can perform an AND operation between the number and 1.
+
+3. Then we can increment the count.
+
+4. If the result is 1, then the count will be incremented.
+
+5. If the result is 0, then the count will not be incremented.
+
+6. After that, we can right shift the number by 1.
+
+7. We can repeat the process until the number becomes 0.
+
+### Example
+
+```cpp
+
+int count_bits(int n){
+  int count = 0;
+
+  while(n>0){
+
+    int last_bit = n & 1;
+
+    count += last_bit;
+
+    n = n >> 1;
+
+  }
+
+  return count;
+}
+
+```
+
+`or,`
+
+```cpp
+
+int count_bits(int n){
+  int count = 0;
+
+  while(n>0){
+
+    count += n & 1;
+
+    n = n >> 1;
+
+  }
+
+  return count;
+}
+
+```
+
+**Note: For number n, the loop will run for log(n) times.**
+
+### Complexity
+
+- Time complexity: **O(log(n))**
+
+- Space complexity: **O(1)**
+
+----------------------------------------

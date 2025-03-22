@@ -109,7 +109,7 @@ The new value of n is 5.
 
 ```
 
-----------------------------------------
+---
 
 ## 1.2.3.2 Power of Two
 
@@ -231,7 +231,7 @@ As the result is not 0 so, 15 is not a power of 2.
 
 ```
 
-----------------------------------------
+---
 
 ## 1.2.3.3 Count Set Bits
 
@@ -321,4 +321,82 @@ int count_bits(int n){
 
 - Space complexity: **O(1)**
 
-----------------------------------------
+---
+
+## 1.2.3.4 Brian Kernighan's Algorithm
+
+### 1.2.3.3.1 Count Set Bits : Hack (Faster Method)
+
+It is a faster method to count the number of set bits in an integer.
+
+It is also known as the **Brian Kernighan's Algorithm**.
+
+### Solution
+
+For this problem,
+
+1. Removes the last set bit from the number.
+
+2. Increments the count.
+
+3. Repeats the process until the number becomes 0.
+
+### Example
+
+```cpp
+
+int count_bits(int n){
+  int count = 0;
+
+  while(n>0){
+
+    n = n & (n-1); // Removes the last set bit from the number.
+
+    count++;
+
+  }
+
+  return count;
+}
+
+```
+
+### Explanation
+
+```cpp
+
+Let, n = 9;
+
+We know,
+
+        N   = 9 = 0 0 0 0 1 0 0 1
+      N-1   = 8 = 0 0 0 0 1 0 0 0
+      ------------------------------
+N & (N-1)  =  8 = 0 0 0 0 1 0 0 0
+
+As the result is 8 so, the last set bit is removed from the number.
+
+After that, the new value of n is 8. and the count is incremented by 1. So, the count is 1.
+
+Similarly,
+
+        N   = 8 = 0 0 0 0 1 0 0 0
+      N-1   = 7 = 0 0 0 0 0 1 1 1
+      ------------------------------
+N & (N-1)  =  0 = 0 0 0 0 0 0 0 0
+
+As the result is 0 so, the last set bit is removed from the number.
+
+After that, the new value of n is 0. and the count is incremented by 1. So, the count is 2.
+
+So, the total number of set bits in 9 is 2.
+
+```
+
+### Complexity
+
+- Time complexity: **O(log(n))**
+
+- Space complexity: **O(1)**
+
+---

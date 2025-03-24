@@ -400,3 +400,265 @@ So, the total number of set bits in 9 is 2.
 - Space complexity: **O(1)**
 
 ---
+
+## 1.2.3.5 Fast Exponentiation
+
+### What is Exponentiation?
+
+```cpp
+
+ 1. a ^ 3 = a * a * a
+
+ 2. a ^ 4 = a * a * a * a
+
+ 3. a ^ n = a * a * a * a * ... * a (n times)
+
+```
+
+### Problem Statement
+
+Write a function that takes two integers a and n and returns a^n.
+
+### Example
+
+```cpp
+
+Input 1  : a = 2, n = 3
+
+Output 1 : 8
+
+Input 2  : a = 3, n = 5
+
+Output 2 : 243
+
+```
+
+### Solution
+
+For this problem,
+
+1. We can calculate a^n by using the fast exponentiation method.
+
+2. We can perform an AND operation between n and 1 to get the last bit.
+
+3. If the last bit is 1, then we can multiply the answer by a. Otherwise, we can skip the multiplication.
+
+4. After that, we can square the value of a. That means a = a \* a.
+
+5. We can right shift the value of n by 1.
+
+6. We can repeat the process until n becomes 0.
+
+### Example
+
+```cpp
+
+int fastExpo(int a, int n){
+  int ans = 1;
+
+  while(n>0){
+
+    int last_bit = n & 1;
+
+    if(last_bit){ // If the last_bit is 1
+      ans = ans * a; // Multiply the answer by a
+    }
+
+    a = a * a; // Square the value of a (Multiplying the previous power of a)
+
+    n = n >> 1;
+
+  }
+
+  return ans;
+}
+
+```
+
+### Explanation
+
+```cpp
+
+Let, a=3, n=5;
+
+We know,
+
+        a   = 3 = 0 0 0 0 0 0 1 1
+        n   = 5 = 0 0 0 0 0 1 0 1
+
+        a^5 = 3 * 3 * 3 * 3 * 3 = 243
+
+After performing the fast exponentiation method,
+
+step 1: n = 5, a = 3, ans = 1
+
+        last_bit = n & 1 = 5 & 1 = 1 (so we can multiply the answer by a)
+
+        ans = ans * a = 1 * 3 = 3 (updated) = 0 0 0 0 0 0 1 1
+
+        a = a * a = 3 * 3 = 9 = 0 0 0 0 1 0 0 1
+
+        n = n >> 1 = 5 >> 1 = 2 = 0 0 0 0 0 0 1 0
+
+step 2: n = 2, a = 9, ans = 3
+
+        last_bit = n & 1 = 2 & 1 = 0 (so we can skip the multiplication)
+
+        ans = ans * a = 3 (same as before because last_bit is 0) = 0 0 0 0 0 0 1 1
+
+        a = a * a = 9 * 9 = 81 = 0 0 1 0 1 0 0 1
+
+        n = n >> 1 = 2 >> 1 = 1 = 0 0 0 0 0 0 0 1
+
+step 3: n = 1, a = 81, ans = 3
+
+        last_bit = n & 1 = 1 & 1 = 1 (so we can multiply the answer by a)
+
+        ans = ans * a = 3 * 81 = 243 (updated) = 1 1 1 1 0 0 1 1
+
+        a = a * a = 81 * 81 = 6561 = 1 1 1 1 1 0 0 0 1
+
+        n = n >> 1 = 1 >> 1 = 0 = 0 0 0 0 0 0 0 0
+
+Now the value of n is 0. So, the the process is stopped.
+
+The final answer is 243.
+
+```
+
+---
+
+## 1.2.3.6 Convert Decimal number to Binary
+
+### Problem Statement
+
+Write a function that takes an integer and returns its binary representation.
+
+### Example
+
+```cpp
+
+Input 1  : 15
+
+Output 1 : 1111
+
+Input 2  : 16
+
+Output 2 : 10000
+
+```
+
+### Solution
+
+For this problem,
+
+1. We can take an 'ans' variable and initialize it with zero (0).
+
+2. We can also take a 'p' variable and initialize it with 1.
+
+3. We can extract the last bit of the decimal number by performing an AND operation between the number and 1.
+
+4. Now we can multiply the last bit with 'p' and add it to the 'ans'.
+
+5. After the first iteration, 'p' will be **p = p \* 10**. Because we need to multiply the last bit with 10.
+
+6. After that, we can right shift the number by 1.
+
+7. We can repeat the process until the number becomes 0.
+
+8. Finally, we can reverse the 'ans' to get the binary representation of the decimal number.
+
+### What we're actually doing?
+
+```cpp
+
+Let, n = 9;
+
+ans = 0 + 1 * 1 + 0 * 10 ^ 1 + 0 * 10 ^ 2 + 1 * 10 ^ 3 = 1001
+
+ans = 0 + 1 * 1 + 0 * 10 + 0 * 100 + 1 * 1000 = 1001
+
+```
+
+### Example
+
+```cpp
+
+int decimalToBinary(int n){
+  int ans = 0;
+  int p = 1;
+
+  while(n>0){
+
+    int last_bit = n & 1;
+
+    ans += p * last_bit;
+
+    p = p * 10;
+
+    n = n >> 1;
+
+  }
+
+  return ans;
+}
+
+```
+
+### Explanation
+
+```cpp
+
+Let, n = 9;
+
+We know,
+
+        n   = 9 = 0 0 0 0 1 0 0 1
+
+Now, we need to convert 9 to binary.
+
+Step 1: n = 9, ans = 0, p = 1
+
+        last_bit = n & 1 = 9 & 1 = 1
+
+        ans = ans + p * last_bit = 0 + 1 * 1 = 1
+
+        p = p * 10 = 1 * 10 = 10
+
+        n = n >> 1 = 9 >> 1 = 4 = 0 0 0 0 0 1 0 0
+
+Step 2: n = 4, ans = 1, p = 10
+
+        last_bit = n & 1 = 4 & 1 = 0
+
+        ans = ans + p * last_bit = 1 + 10 * 0 = 1
+
+        p = p * 10 = 10 * 10 = 100
+
+        n = n >> 1 = 4 >> 1 = 2 = 0 0 0 0 0 0 1 0
+
+Step 3: n = 2, ans = 1, p = 100
+
+        last_bit = n & 1 = 2 & 1 = 0
+
+        ans = ans + p * last_bit = 1 + 100 * 0 = 1
+
+        p = p * 10 = 100 * 10 = 1000
+
+        n = n >> 1 = 2 >> 1 = 1 = 0 0 0 0 0 0 0 1
+
+Step 4: n = 1, ans = 1, p = 1000
+
+        last_bit = n & 1 = 1 & 1 = 1
+
+        ans = ans + p * last_bit = 1 + 1000 * 1 = 1001
+
+        p = p * 10 = 1000 * 10 = 10000
+
+        n = n >> 1 = 1 >> 1 = 0 = 0 0 0 0 0 0 0 0
+
+Now the value of n is 0. So, the the process is stopped.
+
+The final answer is 1001.
+
+```

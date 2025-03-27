@@ -75,3 +75,46 @@ output : 120
 In this example, the base case is when `n` is equal to 0. When `n` is 0, the function returns 1. Otherwise, the function calls itself with `n - 1` as the argument. This process continues until the base case is reached, at which point the function returns the final result.
 
 It takes time as `O(n)` and space as `O(n)` because it uses the stack to store the function calls.
+
+---
+
+## 1.2 Fibonacci
+
+### First 7 Fibonacci Numbers
+
+```cpp
+
+0, 1, 1, 2, 3, 5, 8
+
+```
+
+* The first two numbers always remain the same, i.e., 0 and 1.
+
+* The next number is the sum of the previous two numbers.
+
+* The Fibonacci sequence is defined by the recurrence relation `F(n) = F(n-1) + F(n-2)`.
+
+### Pseudocode
+
+```cpp
+
+int fibonacci(int n) {
+    if (n == 0 or n == 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+```
+
+### Output
+
+```cpp
+
+input : 6
+
+output : 8
+
+```
+
+---

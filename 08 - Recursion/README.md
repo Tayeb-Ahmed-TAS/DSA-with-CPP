@@ -88,11 +88,11 @@ It takes time as `O(n)` and space as `O(n)` because it uses the stack to store t
 
 ```
 
-* The first two numbers always remain the same, i.e., 0 and 1.
+- The first two numbers always remain the same, i.e., 0 and 1.
 
-* The next number is the sum of the previous two numbers.
+- The next number is the sum of the previous two numbers.
 
-* The Fibonacci sequence is defined by the recurrence relation `F(n) = F(n-1) + F(n-2)`.
+- The Fibonacci sequence is defined by the recurrence relation `F(n) = F(n-1) + F(n-2)`.
 
 ### Pseudocode
 
@@ -118,3 +118,113 @@ output : 8
 ```
 
 ---
+
+## 1.3 Sorted Array Check
+
+### Problem Statement
+
+Write a function to check is an array is sorted or not !
+
+### To solve this problem using recursion
+
+1. Check if the array is empty or has only one element. If so, return true.
+
+2. Check if the first element is greater than the second element. If so, return false.
+
+3. Recursively check the rest of the array by calling the function with the next index.
+
+4. If the function returns true for all elements, return true.
+
+5. If the function returns false for any element, return false.
+
+6. Return true if the array is sorted.
+
+7. Return false if the array is not sorted.
+
+8. The base case is when the array is empty or has only one element. In this case, the array is considered sorted.
+
+9. The recursive case is when the first element is less than or equal to the second element. In this case, the function calls itself with the next index.
+
+10. The function calls itself with the next index until the base case is reached.
+
+### Pseudocode
+
+```cpp
+
+bool isSorted(int arr[],int n){
+
+    //base case
+    if(n==1 or n==0){ // if the array is empty or has only one element
+
+        return true;
+
+    }
+
+    //rec case
+    if(arr[0]<arr[1] and isSorted(arr+1, n-1)){
+
+        // if the first element is less than the second element and the rest of the array is sorted
+
+        return true;
+
+    }
+    return false;
+}
+
+```
+
+or,
+
+```cpp
+
+bool isSorted(int arr[], int n, int i = 0) {
+
+  if (i == n - 1) {
+    // If the array is empty or has only 1 element
+    return true;
+  }
+
+  if (arr[i] < arr[i + 1] and isSorted(arr, n, i + 1)) {
+    // If the first element is less than the second element and the rest of the
+    // array is sorted
+    // i+1 is the next element of the array
+    // n is the size of the array
+    // we change the index not the arr (arr+1) itself
+    return true;
+  }
+
+  return false;
+}
+
+int main() {
+
+  int arr[] = {1, 2, 3, 4, 5, 6};
+
+  int n = sizeof(arr) / sizeof(int);
+
+  cout << isSorted(arr, n, 0) << endl; // Innitializing (index) i to 0
+
+  int arr2[] = {9, 26, 17, 4, 5, 6};
+
+  int n2 = sizeof(arr2) / sizeof(int);
+  
+  cout << isSorted(arr2, n2) << endl;
+  // If we can't pass the value of i, It will be 0 by default
+  // because we initialized it to 0 in the function
+
+  return 0;
+}
+
+```
+
+### Output
+
+```cpp
+
+Input 1     : arr[] = {1, 2, 3, 4, 5}
+Output 1    : 1 // true
+
+Input 2     : arr[] = {1, 2, 3, 5, 4, 6}
+Output 2    : 0 // false
+
+```

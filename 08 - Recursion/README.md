@@ -207,7 +207,7 @@ int main() {
   int arr2[] = {9, 26, 17, 4, 5, 6};
 
   int n2 = sizeof(arr2) / sizeof(int);
-  
+
   cout << isSorted(arr2, n2) << endl;
   // If we can't pass the value of i, It will be 0 by default
   // because we initialized it to 0 in the function
@@ -221,10 +221,12 @@ int main() {
 
 ```cpp
 
-Input 1     : arr[] = {1, 2, 3, 4, 5}
+Input  1    : arr[] = {1, 2, 3, 4, 5}
 Output 1    : 1 // true
 
-Input 2     : arr[] = {1, 2, 3, 5, 4, 6}
+Input  2    : arr[] = {1, 2, 3, 5, 4, 6}
 Output 2    : 0 // false
 
 ```
+
+---

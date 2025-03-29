@@ -243,27 +243,27 @@ Output 2    : 0 // false
 
 Consider arr = {1, 2, 3, 4, 5}, n = 5:
 
-Step 1 : First call: isSorted({1, 2, 3, 4, 5}, 5)
+Step 1 : First call, isSorted({1, 2, 3, 4, 5}, 5)
 
                 1 < 2 → Proceed with isSorted({2, 3, 4, 5}, 4)
 
 
-Step 2 : Second call: isSorted({2, 3, 4, 5}, 4)
+Step 2 : Second call, isSorted({2, 3, 4, 5}, 4)
 
                 2 < 3 → Proceed with isSorted({3, 4, 5}, 3)
 
 
-Step 3 : Third call: isSorted({3, 4, 5}, 3)
+Step 3 : Third call, isSorted({3, 4, 5}, 3)
 
                 3 < 4 → Proceed with isSorted({4, 5}, 2)
 
 
-Step 4 : Fourth call: isSorted({4, 5}, 2)
+Step 4 : Fourth call, isSorted({4, 5}, 2)
 
                 4 < 5 → Proceed with isSorted({5}, 1)
 
 
-Step 5 : Fifth call: isSorted({5}, 1)
+Step 5 : Fifth call, isSorted({5}, 1)
 
                 Base case reached (n == 1), returns true.
 

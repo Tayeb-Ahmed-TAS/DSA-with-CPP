@@ -248,7 +248,7 @@ Step 1 : First call: isSorted({1, 2, 3, 4, 5}, 5)
                 1 < 2 → Proceed with isSorted({2, 3, 4, 5}, 4)
 
 
-SStep 2 : econd call: isSorted({2, 3, 4, 5}, 4)
+Step 2 : Second call: isSorted({2, 3, 4, 5}, 4)
 
                 2 < 3 → Proceed with isSorted({3, 4, 5}, 3)
 

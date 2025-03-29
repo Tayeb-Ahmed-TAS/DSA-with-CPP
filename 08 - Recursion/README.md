@@ -241,7 +241,7 @@ Output 2    : 0 // false
 
 ```cpp
 
-Consider arr = {1, 2, 3, 4, 5}, n = 5:
+Consider, arr = {1, 2, 3, 4, 5}, n = 5:
 
 Step 1 : First call, isSorted({1, 2, 3, 4, 5}, 5)
 

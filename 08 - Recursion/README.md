@@ -217,6 +217,14 @@ int main() {
 
 ```
 
+### Summary
+
+- `n - 1` is used because we reduce the problem size by one in each recursive call.
+
+- We pass `arr + 1` to move the pointer to the next element.
+
+- The function progressively checks smaller and smaller subarrays until it reaches the base case.
+
 ### Output
 
 ```cpp
@@ -226,6 +234,41 @@ Output 1    : 1 // true
 
 Input  2    : arr[] = {1, 2, 3, 5, 4, 6}
 Output 2    : 0 // false
+
+```
+
+### Explanation
+
+```cpp
+
+Consider arr = {1, 2, 3, 4, 5}, n = 5:
+
+Step 1 : First call: isSorted({1, 2, 3, 4, 5}, 5)
+
+                1 < 2 → Proceed with isSorted({2, 3, 4, 5}, 4)
+
+
+SStep 2 : econd call: isSorted({2, 3, 4, 5}, 4)
+
+                2 < 3 → Proceed with isSorted({3, 4, 5}, 3)
+
+
+Step 3 : Third call: isSorted({3, 4, 5}, 3)
+
+                3 < 4 → Proceed with isSorted({4, 5}, 2)
+
+
+Step 4 : Fourth call: isSorted({4, 5}, 2)
+
+                4 < 5 → Proceed with isSorted({5}, 1)
+
+
+Step 5 : Fifth call: isSorted({5}, 1)
+
+                Base case reached (n == 1), returns true.
+
+
+The function then returns true all the way back up the recursive stack.
 
 ```
 

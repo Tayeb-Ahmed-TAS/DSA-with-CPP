@@ -32,5 +32,7 @@ int main() {
 
   int key = 7;
 
+  cout << firstOccurence(arr, n, key) << endl;
+
   return 0;
 }

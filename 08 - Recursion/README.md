@@ -273,3 +273,187 @@ The function then returns true all the way back up the recursive stack.
 ```
 
 ---
+
+## 1.4 Print 1 to N Numbers
+
+### Problem Statement
+
+Print numbers from 1 to N using recursion in both increasing and decreasing order.
+
+### For Increasing Order
+
+1. Check if `n` is equal to 0. If so, return.
+
+2. print the number `n`.
+
+3. Recursively call the function with `n - 1`.
+
+4. The base case is when `n` is equal to 0. In this case, the function returns without printing anything.
+
+### For Decreasing Order
+
+1. Check if `n` is or equal to 0. If so, return.
+
+2. Recursively call the function with `n - 1`.
+
+3. Print the number `n`.
+
+4. The base case is when `n` is equal to 0. In this case, the function returns without printing anything.
+
+### Pseudocode
+
+```cpp
+
+void printIncreasing(int n) {
+
+    if (n == 0) {
+
+        return;
+    }
+
+    printIncreasing(n - 1);
+
+    cout << n << " ";
+
+}
+
+void printDecreasing(int n) {
+
+    if (n == 0) {
+
+        return;
+    }
+
+    cout << n << " ";
+
+    printDecreasing(n - 1);
+
+}
+
+```
+
+### Output
+
+```cpp
+
+Input : 5
+
+Output : 1 2 3 4 5
+
+Output : 5 4 3 2 1
+
+```
+
+---
+
+## 1.5 First Occurence
+
+### Problem Statement
+
+Write a function to find the first occurence of an element in an array.
+
+### What is First Occurence?
+
+First occurence is the first time an element appears in an array. For example, in the array `{1, 2, 3, 4, 5, 2}`, the first occurence of `2` is at index `1`.
+
+### To solve this problem using recursion
+
+1. We need to perform a **Linear search recursively** to find the first occurrence of an element in an array.
+
+2. **Base Case:**
+
+   Check if the size of the array is `0`.
+
+   - If yes, return `-1` since the key cannot be found in an empty array.
+
+3. **Check the first element:**
+
+   If `arr[0] == key`, then we found the element at the first index.
+
+   - Return `0` as it's the position in the current subarray.
+
+4. **Recursive Step:**
+
+   Call the same function on the rest of the array (i.e., `arr + 1`) and reduce the size `n - 1`.
+
+5. Store the result from the recursive call in `subIndex`.
+
+6. If `subIndex == -1`, that means the key was not found in the subarray.
+
+   - So return `-1`.
+
+7. If `subIndex != -1`, that means the key was found in the subarray.
+
+   - Add `1` to `subIndex` and return it (to adjust to the original array's index).
+
+8. The function continues to return back through the recursive calls with the corrected index until it reaches the top level and gives the final result.
+
+### Pseudocode
+
+```cpp
+
+int firstOccurence(int arr[], int n, int key){
+
+    //base case
+    if(n==0){ // if the array is empty or has only one element
+
+        return -1;
+
+    }
+
+    //rec case
+
+    if(arr[0]==key){ // if the first element is equal to the target element
+
+        return 0; // return the index of the first element
+
+    }
+
+    int subIndex = firstOccurence(arr+1, n-1, key); // check the rest of the array as subarray
+
+    if(subIndex != -1){ // if the function returns a valid index for the rest of the array
+
+        return subIndex + 1; // return that index
+
+    }
+
+    return -1; // if the function returns -1 for the rest of the array, return -1
+}
+
+```
+
+### Explanation
+
+```cpp
+
+✅ Step-by-step trace:
+
+Step 0:
+
+    Array = [3, 5, 7, 6, 2]
+    Key = 7
+    Check: arr[0] = 3 → Not the key
+    → Solve subproblem for: [5, 7, 6, 2]
+
+Step 1:
+
+    Array = [5, 7, 6, 2]
+    Check: arr[0] = 5 → Not the key
+    → Solve subproblem for: [7, 6, 2]
+
+Step 2:
+
+    Array = [7, 6, 2]
+    Check: arr[0] = 7 → ✅ Found the key! Return 0
+
+Now, we bubble back through the recursion:
+
+Step 2 returns: 0  (as, if(arr[0] == key) return 0)
+Step 1 returns: 0 + 1 = 1 (as, subIndex + 1)
+Step 0 returns: 1 + 1 = 2 (as, subIndex + 1)
+
+So, the key was found at index 2 in the original array.
+
+```
+
+---

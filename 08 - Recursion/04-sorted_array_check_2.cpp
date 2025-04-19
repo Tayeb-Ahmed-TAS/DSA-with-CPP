@@ -4,7 +4,7 @@ using namespace std;
 
 bool isSorted(int *arr, int n, int i = 0) {
 
-  if (i == n - 1) {
+  if (i == n or i == n - 1) {
     // If the array is empty or has only 1 element
     return true;
   }

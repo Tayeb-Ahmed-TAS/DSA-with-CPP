@@ -32,7 +32,11 @@ int main() {
 
   int key = 7;
 
-  cout << firstOccurence(arr, n, key) << endl;
+  int indx = firstOccurence(arr, n, key);
+
+  (indx == -1)
+      ? cout << "Item is Not Found!"
+      : cout << "First Occurence: " << firstOccurence(arr, n, key) << endl;
 
   return 0;
 }

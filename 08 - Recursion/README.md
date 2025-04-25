@@ -179,7 +179,7 @@ or,
 
 bool isSorted(int *arr, int n, int i = 0) {
 
-  if (i == n - 1) {
+  if (i == n or i == n - 1) {
     // If the array is empty or has only 1 element
     return true;
   }
@@ -457,3 +457,127 @@ So, the key was found at index 2 in the original array.
 ```
 
 ---
+
+## 1.6 Last Occurence
+
+### Problem Statement
+
+Write a function to find the last occurence of an element in an array.
+
+### What is Last Occurence?
+
+Last occurence is the last time an element appears in an array. For example, in the array `{1, 2, 3, 4, 5, 2}`, the last occurence of `2` is at index `5`.
+
+### To solve this problem using recursion
+
+### Pseudocode
+
+```cpp
+
+int lastOccurence(int arr[], int n, int key){
+
+        //base case
+        if(n==0){ // if the array is empty
+
+            return -1;
+
+        }
+
+        //rec case
+
+        int subIndex = lastOccurence(arr+1, n-1, key); // check the rest of the array as subarray
+
+        if(subIndex==-1){ // if the function returns -1 for the rest of the array
+
+            if(arr[0]==key){ // if the first element is equal to the target element
+
+                return 0; // return the index of the first element
+
+            }else{
+
+                return -1; // if the first element is not equal to the target element, return -1
+
+            }
+        }else{
+
+            return subIndex + 1; // if the function returns a valid index for the rest of the array, return that index
+        }
+}
+
+```
+
+### Explanation
+
+```cpp
+
+✅ Step-by-step trace:
+
+Step 1:
+
+    Array = [1, 2, 7, 6, 7, 5]
+    Key = 7
+
+        Call subproblem with [2, 7, 6, 7, 5]
+
+Step 2:
+
+    Array = [2, 7, 6, 7, 5]
+
+        Call subproblem with [7, 6, 7, 5]
+
+Step 3:
+
+    Array = [7, 6, 7, 5]
+
+        Call subproblem with [6, 7, 5]
+
+Step 4:
+
+    Array = [6, 7, 5]
+
+        Call subproblem with [7, 5]
+
+Step 5:
+
+    Array = [7, 5]
+
+        Call subproblem with [5]
+
+Step 6:
+
+    Array = [5]
+
+        Call subproblem with [] (empty array)
+
+Step 7:
+
+    Array = []
+
+        Base case reached!
+
+        Return -1 (empty array, nothing found)
+
+```
+
+```cpp
+
+🔄 Now Bubbling Back
+
+
+1. At [5], key not found → return -1
+
+2. At [7, 5], arr[0] == key → return 0
+
+3. At [6, 7, 5], key found at subarray → return 0 + 1 = 1
+
+4. At [7, 6, 7, 5], key found at subarray → return 1 + 1 = 2
+
+5. At [2, 7, 6, 7, 5], key found at subarray → return 2 + 1 = 3
+
+6. At [1, 2, 7, 6, 7, 5], key found at subarray → return 3 + 1 = 4
+
+    Thus, last occurrence of 7 is at index 4
+
+```
+
+![Last Occurence](https://github.com/Tayeb-Ahmed-TAS/Images/blob/main/last%20occurence.png)

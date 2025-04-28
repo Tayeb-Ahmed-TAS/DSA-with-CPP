@@ -583,3 +583,147 @@ Step 7:
 ![Last Occurence](https://github.com/Tayeb-Ahmed-TAS/Images/blob/main/last%20occurence.png)
 
 ---
+
+## 1.7 Power of a Number
+
+### Problem Statement
+
+**Write a function to find the power of a number, both number & power are given as input.**
+
+### 1.7.1 Method 1: Using Iteration
+
+### To solve this problem using recursion
+
+1. a ^ n = a \* a ^ (n - 1)
+
+   - Here `a ^ (n - 1)` is the recursive call (Subproblem).
+
+2. a ^ 0 = 1 (base case)
+
+### Pseudocode
+
+```cpp
+
+int power(int a, int n){
+
+    // Base case
+
+    if(n==0){
+
+        return 1; // a^0 = 1
+
+    }
+
+    // Recursive case
+
+    return a * power(a, n - 1); // a^n = a * a^(n-1)
+}
+
+```
+
+### Output
+
+```cpp
+
+Input : a = 2, n = 5
+
+Output : 32
+// 2^5 = 32
+
+```
+
+### Explanation
+
+```cpp
+
+2^5 = 2 * 2^4
+    = 2 * 2 * 2^3
+    = 2 * 2 * 2 * 2^2
+    = 2 * 2 * 2 * 2 * 2^1
+    = 2 * 2 * 2 * 2 * 2 * 1
+    = 32
+
+```
+
+### Complexity
+
+- Time Complexity: O(n) because we are making `n` recursive calls.
+
+- Space Complexity: O(n) because of the recursion stack.
+
+---
+
+### 1.7.2 Method 2: Using Optimal Approach
+
+This method is more efficient than the previous one. Because it reduces the `Time and Space Complexity`.
+
+### To solve this problem using recursion
+
+1. a ^ n = (a ^ (n / 2)) ^ 2 (if n is even)
+
+2. a ^ n = a \* (a ^ ((n - 1) / 2)) ^ 2 (if n is odd)
+
+3. a ^ 0 = 1 (base case)
+
+### Pseudocode
+
+```cpp
+
+int fastPower(int a, int n){
+
+    // Base case
+
+    if(n==0){
+
+        return 1; // a^0 = 1
+
+    }
+
+    // Recursive case
+
+    int subProblem = fastPower(a, n / 2); // a^(n/2)
+
+    int subProblemSquare = subProblem * subProblem; // (a^(n/2))^2
+
+    if(n&1){ // if n is odd. (Checking the last set bit)
+
+        return a * subProblemSquare; // a^(n) = a * (a^(n/2))^2}
+    }
+
+    return subProblemSquare;
+}
+
+```
+
+### Output
+
+```cpp
+
+Input : a = 2, n = 5
+
+Output : 32
+
+// 2^5 = 32
+
+```
+
+### Explanation
+
+```cpp
+
+2^5 = 2 * 2^4
+    = 2 * (2^2)^2
+    = 2 * (2 * 2)^2
+    = 2 * 4^2
+    = 2 * 16
+    = 32
+
+```
+
+### Complexity
+
+- Time Complexity: O(log2 n) because we are halving the value of `n` in each recursive call.
+
+- Space Complexity: O(log2 n) because of the recursion stack.
+
+---

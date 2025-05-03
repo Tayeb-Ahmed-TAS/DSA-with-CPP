@@ -8,7 +8,7 @@ Merge Sort is a divide-and-conquer algorithm that sorts an array by recursively 
 
 2. **Conquer**: Each half is sorted recursively using the same merge sort algorithm.
 
-   - MergeSort(Left) and MergeSort(Right).
+   - `MergeSort(Left)` and `MergeSort(Right)`.
 
    - Left part is `Start` to `Mid` and Right part is `Mid + 1` to `End`.
 
@@ -16,7 +16,7 @@ Merge Sort is a divide-and-conquer algorithm that sorts an array by recursively 
 
 3. **Combine**: The sorted halves are merged back together to form a single sorted array.
 
-   - Merge(Left, Right).
+   - `Merge(Left, Right)`.
    - The merging process involves comparing the elements of the two halves and arranging them in sorted order.
    - We need 2 pointers `i` and `j` and a `temporary array` to store the merged result.
    - In the temporary array, we will store the elements in sorted order.
@@ -36,3 +36,9 @@ Merge Sort is a divide-and-conquer algorithm that sorts an array by recursively 
 | 5           | {4, 6}, {15}, {2, 7}   | {4, 6}, {2, 7, 15}     | {4, 6}, {2, 7, 15}   |
 | 6           | {4, 6}, {2, 7, 15}     | {2, 4, 6, 7, 15}       | {2, 4, 6, 7, 15}     |
 | 7           | {}                     | {}                     | {2, 4, 6, 7, 15}     |
+
+## Complexity Analysis
+
+- **Time Complexity**: O(n log n) in all cases (best, average, and worst) because the array is divided in half at each level of recursion, and merging takes linear time.
+
+- **Space Complexity**: O(n) due to the temporary array used for merging.

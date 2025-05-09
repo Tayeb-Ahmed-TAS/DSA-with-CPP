@@ -72,7 +72,7 @@ int main() {
   vector<int> arr{10, 5, 2, 0, 7, 6, 4};
 
   int start = 0;
-  int end = arr.size() - 1;
+  int end = arr.size() - 1; // 7 - 1 = 6 (for index 0 to 6)
 
   merge_sort(arr, start, end);
 
